@@ -1,19 +1,28 @@
-import Link from "next/link";
+import { Link } from "@/navigation";
 import { AiFillHome } from "react-icons/ai";
 import HeaderSearchBox from "./HeaderSearchBox";
 import { GrLanguage } from "react-icons/gr";
+import { useTranslations } from "next-intl";
+import { useRouter, usePathname } from "@/navigation";
 
-const HeaderNavBar = (props) => {
+const HeaderNavBar = ({ scroll, locale }) => {
+  const t = useTranslations("Header");
+  const router = useRouter();
+  const pathname = usePathname();
+  const handleChange = (e) => {
+    router.push(pathname, { locale: e.target.value });
+  };
+
   return (
     <div
       className={`border-t border-b h-10 w-full justify-between items-center flex xl:mt-0  ${
-        props.scroll
+        scroll
           ? "fixed top-0 bg-gradient-to-r from-slate-900 via-sky-800	 to-slate-900 z-40 pr-32 pl-36 w-full h-12 "
           : ""
       } `}>
       <img
         className={`w-auto h-10 bg-white rounded-md p-1 ${
-          props.scroll ? "fixed" : "hidden"
+          scroll ? "fixed" : "hidden"
         }`}
         src="/logo_footer.png"
         alt=""
@@ -23,35 +32,43 @@ const HeaderNavBar = (props) => {
           <AiFillHome />
         </Link>
         <Link className="border-l pl-3" href="/Politics">
-          سیاست
+          {t("Politics")}
         </Link>
         <Link className="border-l pl-3" href="/Economy">
-          اقتصاد
+          {t("Economy")}
         </Link>
         <Link className="border-l pl-3" href="/Culture">
-          فرهنگ
+          {t("Culture")}
         </Link>
         <Link className="border-l pl-3" href="/Social">
-          اجتماعی
+          {t("Social")}
         </Link>
         <Link className="border-l pl-3" href="/Sport">
-          ورزش
+          {t("Sport")}
         </Link>
         <Link className="border-l pl-3" href="/Provinces">
-          استان ها
+          {t("Provinces")}
         </Link>
       </div>
-      {props.scroll ? <HeaderSearchBox /> : <></>}
-
-      <div className="pl-3 flex gap-16 items-center">
-        <div className="flex gap-3 justify-center items-center">
-          <div className="flex items-center gap-2">
-            <button className="border-l pl-2">فارسی</button>
-            <button>English</button>
-          </div>
+      {scroll ? <HeaderSearchBox t={t} /> : <></>}
+      <div className="flex gap-10">
+        <div className="flex items-center gap-2">
+          <select
+            value={locale}
+            onChange={handleChange}
+            className="bg-inherit text-center outline-none">
+            <option value="en" className="bg-sky-950">
+              English
+            </option>
+            <option value="fa" className="bg-sky-950">
+              فارسی
+            </option>
+          </select>
           <GrLanguage />
         </div>
-        <div>{new Date().toLocaleDateString("fa-IR")}</div>
+        <div className="pl-3 flex gap-16 items-center">
+          <div>{new Date().toLocaleDateString(locale)}</div>
+        </div>
       </div>
     </div>
   );

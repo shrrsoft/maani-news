@@ -2,7 +2,7 @@ import AdsRow from "@/Components/AdsRow";
 import Slider from "@/Components/NewsComponent/Slider";
 import SmallTile from "@/Components/NewsComponent/SmallTile";
 import Tile from "@/Components/NewsComponent/Tile";
-import Link from "next/link";
+import { Link } from "@/navigation";
 
 export default async function Home() {
   const data = await fetch("http://localhost:8000/post", {

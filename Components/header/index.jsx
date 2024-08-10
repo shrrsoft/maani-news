@@ -3,9 +3,11 @@
 import { useState, useEffect } from "react";
 import HeaderNavBar from "./HeaderNavBar";
 import HeaderSearchBox from "./HeaderSearchBox";
+import { useTranslations } from "next-intl";
 
-const Header = () => {
+const Header = ({ locale }) => {
   const [scroll, setScroll] = useState(false);
+  const t = useTranslations("Header");
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -25,10 +27,10 @@ const Header = () => {
         />
         <div className="flex flex-col w-full pl-32 gap-3">
           <div className="flex items-center justify-between">
-            <h1 className=" text-3xl">خبرگزاری پیشران</h1>
+            <h1 className=" text-3xl"> {t("Name")}</h1>
             <HeaderSearchBox scroll={scroll} />
           </div>
-          <HeaderNavBar scroll={scroll} />
+          <HeaderNavBar scroll={scroll} locale={locale} />
         </div>
       </div>
     </div>

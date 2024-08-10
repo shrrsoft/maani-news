@@ -12,6 +12,7 @@
     "@eslint/config-array": "^0.17.1",
     "@eslint/object-schema": "^2.1.4",
     "next": "14.2.5",
+    "next-intl": "^3.17.2",
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
