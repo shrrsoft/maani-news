@@ -16,5 +16,8 @@
         "Contact": "Contact",
         "Designer": "Desigend by S'Hamidreza Razavi",
         "CoppyWrite": "All material and intellectual rights of this site belong to Iranian Agency.The use of the material is free with reference to the source"
+    },
+    "body": {
+        "CollectedNews": "CollectedNews"
     }
 }

@@ -4,6 +4,7 @@ import HeaderSearchBox from "./HeaderSearchBox";
 import { GrLanguage } from "react-icons/gr";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
+import clsx from "clsx";
 
 const HeaderNavBar = ({ scroll, locale }) => {
   const t = useTranslations("Header");
@@ -28,25 +29,55 @@ const HeaderNavBar = ({ scroll, locale }) => {
         alt=""
       />
       <div className="flex mr-16 gap-4 p-1 items-center text-slate-300 hover:*:text-white">
-        <Link className="border-l px-3 " href="/">
+        <Link className="border-l pl-3" href="/">
           <AiFillHome />
         </Link>
-        <Link className="border-l pl-3" href="/Politics">
+        <Link
+          className={clsx("", {
+            "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
+              pathname === "/Politics",
+          })}
+          href="/Politics">
           {t("Politics")}
         </Link>
-        <Link className="border-l pl-3" href="/Economy">
+        <Link
+          className={clsx("", {
+            "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
+              pathname === "/Economy",
+          })}
+          href="/Economy">
           {t("Economy")}
         </Link>
-        <Link className="border-l pl-3" href="/Culture">
+        <Link
+          className={clsx("", {
+            "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
+              pathname === "/Culture",
+          })}
+          href="/Culture">
           {t("Culture")}
         </Link>
-        <Link className="border-l pl-3" href="/Social">
+        <Link
+          className={clsx("", {
+            "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
+              pathname === "/Social",
+          })}
+          href="/Social">
           {t("Social")}
         </Link>
-        <Link className="border-l pl-3" href="/Sport">
+        <Link
+          className={clsx("", {
+            "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
+              pathname === "/Sport",
+          })}
+          href="/Sport">
           {t("Sport")}
         </Link>
-        <Link className="border-l pl-3" href="/Provinces">
+        <Link
+          className={clsx("", {
+            "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
+              pathname === "/Provinces",
+          })}
+          href="/Provinces">
           {t("Provinces")}
         </Link>
       </div>

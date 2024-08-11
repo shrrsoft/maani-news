@@ -7,18 +7,18 @@ const Footer = () => {
   return (
     <div className=" text-white pt-20 font-[Vazirmatn] ">
       <div className="bg-slate-700 md:px-32 py-3 h-14">
-        <div className=" flex lg:justify-end justify-center items-center">
+        <div className=" flex items-center">
           <div className="flex md:items-end gap-2 p-1 text-sm">
-            <Link className="border-l px-2" href="/policy">
+            <Link className="rtl:border-l px-2" href="/policy">
               {t("Policy")}
             </Link>
-            <Link className="border-l pl-2" href="News//archivedNews">
+            <Link className="border-l pl-2" href="/News">
               {t("Archive")}
             </Link>
             <Link className="border-l pl-2" href="/about">
               {t("About us")}
             </Link>
-            <Link className="border-l pl-2" href="/contact">
+            <Link className="ltr:border-l pl-2" href="/contact">
               {t("Contact")}
             </Link>
           </div>

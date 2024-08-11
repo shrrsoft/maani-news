@@ -1,10 +1,11 @@
 import AdsRow from "@/Components/ads/AdsRow";
+import ChosenTile from "@/Components/NewsComponent/ChosenTile";
 import Slider from "@/Components/NewsComponent/Slider";
 import SmallTile from "@/Components/NewsComponent/SmallTile";
 import Tile from "@/Components/NewsComponent/Tile";
 import { Link } from "@/navigation";
 
-export default async function Home() {
+export default async function Home({ params: { locale } }) {
   const data = await fetch("http://localhost:8000/post", {
     cache: "force-cache",
   }).then((res) => res.json());
@@ -20,27 +21,18 @@ export default async function Home() {
             .map((item) => (
               <SmallTile
                 key={item.id}
+                id={item.id}
                 imgURL={item.imgURL}
                 title={item.title}
-                id={item.id}
+                titleEn={item.titleEn}
+                locale={locale}
               />
             ))
             .slice(0, 4)}
         </div>
 
         <div className="bg-slate-100 shadow-md my-10 lg:my-0">
-          <h3 className="font-bold text-lg">اخبار برگزیده</h3>
-          <ul
-            type="circle"
-            className="list-disc pr-5 font-bold text-right text-sm py- flex flex-col gap-3 ">
-            {data
-              .map((item) => (
-                <li key={item.id}>
-                  <Link href={`/News/${item.id}`}>{item.title}</Link>
-                </li>
-              ))
-              .slice(0, 6)}
-          </ul>
+          <ChosenTile locale={locale} /> 
         </div>
         {data.map((item) => (
           <div key={item.id} className=" bg-slate-100 shadow-md my-8 lg:my-0 ">
@@ -48,8 +40,10 @@ export default async function Home() {
               id={item.id}
               imgURL={item.imgURL}
               title={item.title}
+              titleEn={item.titleEn}
               abst={item.abst}
-              body="تهران- ایرنا- برابری جنسیتی در المپیک از دوره‌های نخست معنایی نداشت اما اکنون به یکی از مهمترین شعارهای بازی‌های المپیک تبدیل شده است."
+              abst_en={item.abst_en}
+              locale={locale}
             />
           </div>
         ))}

@@ -26,7 +26,7 @@ export default function RootLayout({ children, params: { locale } }) {
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className={`${inter.className} ${vazir.className} antialiased`}>
           <Header locale={locale} />
-          <MobileMenu />
+          <MobileMenu locale={locale} />
           <div className="md:max-w-7xl mx-auto font-[Vazirmatn]">
             {children}
           </div>
