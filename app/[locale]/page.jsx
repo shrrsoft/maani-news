@@ -1,4 +1,4 @@
-import AdsRow from "@/Components/AdsRow";
+import AdsRow from "@/Components/ads/AdsRow";
 import Slider from "@/Components/NewsComponent/Slider";
 import SmallTile from "@/Components/NewsComponent/SmallTile";
 import Tile from "@/Components/NewsComponent/Tile";

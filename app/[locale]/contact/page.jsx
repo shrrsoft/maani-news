@@ -4,19 +4,19 @@ const page = () => {
       <h1 className="text-2xl font-bold mb-5 ">تماس با ما</h1>
       <div>
         <span>فکس دبیرخانه:</span>
-        <span>021-222</span>
+        <span>021</span>
       </div>
       <div>
         <span>روابط عمومی:</span>
-        <span>021-222</span>
+        <span>021</span>
       </div>
       <div>
         <span>دفتر مرکزی:</span>
-        <span>021-222</span>
+        <span>021</span>
       </div>
       <div>
         <span>ایمیل پشتیبانی:</span>
-        <span>support@pishran.info</span>
+        <span>support@IranianAgency.info</span>
       </div>
     </div>
   );

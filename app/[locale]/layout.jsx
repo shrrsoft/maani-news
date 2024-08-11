@@ -22,7 +22,7 @@ export default function RootLayout({ children, params: { locale } }) {
   const messages = useMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} dir={locale === "fa" ? "rtl" : "ltr"}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className={`${inter.className} ${vazir.className} antialiased`}>
           <Header locale={locale} />

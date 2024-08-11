@@ -9,10 +9,10 @@ const Footer = () => {
       <div className="bg-slate-700 md:px-32 py-3 h-14">
         <div className=" flex lg:justify-end justify-center items-center">
           <div className="flex md:items-end gap-2 p-1 text-sm">
-            <Link className="border-l px-2" href="/about2">
+            <Link className="border-l px-2" href="/policy">
               {t("Policy")}
             </Link>
-            <Link className="border-l pl-2" href="/Social">
+            <Link className="border-l pl-2" href="News//archivedNews">
               {t("Archive")}
             </Link>
             <Link className="border-l pl-2" href="/about">
@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-gradient-to-r from-slate-800 via-slate-950	 to-slate-800	 lg:px-32 p-3 mb-10">
+      <div className="bg-gradient-to-r from-slate-800 via-slate-950	 to-slate-800	 lg:px-32 p-3 pb-10">
         <div className="flex  justify-center items-start">
           <Link href="https://www.aparat.com/" target="_blank">
             <img
@@ -103,7 +103,7 @@ const Footer = () => {
           <span className="text-sm text-center w-40">{t("Designer")}</span>
           <span className="text-sm text-center">{t("CoppyWrite")}</span>
           <img
-            className="bg-white rounded-md p-1 w-40 lg:mt-0"
+            className="invert rounded-md p-1  w-40 lg:mt-0"
             src="/logo_footer.png"
             alt="footer logo"
           />

@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 html, body {
-  direction: rtl;
   font-family:@apply Vazirmatn, sans-serif;
 }
   @font-face {

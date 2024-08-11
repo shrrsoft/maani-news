@@ -1,4 +1,4 @@
-import AdsCol from "@/Components/AdsCol";
+import AdsCol from "@/Components/ads/AdsCol";
 import ChosenTile from "@/Components/NewsComponent/ChosenTile";
 
 const Layout = ({ children }) => {
