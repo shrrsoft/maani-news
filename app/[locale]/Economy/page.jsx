@@ -13,7 +13,7 @@ const index = async ({ params: { locale } }) => {
     <>
       <div className=" md:grid grid-cols-3 gap-4 md:w-full w-[90%] mx-auto ">
         {data.map((item) => (
-          <Link href={`/News/${item.id}`} className="col-span-2">
+          <Link key={item.id} href={`/News/${item.id}`} className="col-span-2">
             <div
               key={item.id}
               className="bg-slate-100 shadow-md border p-1 py-2 md:flex gap-2 col-span-2 m-1 md:my-0 my-5">
