@@ -3,7 +3,6 @@ import ChosenTile from "@/Components/NewsComponent/ChosenTile";
 import Slider from "@/Components/NewsComponent/Slider";
 import SmallTile from "@/Components/NewsComponent/SmallTile";
 import Tile from "@/Components/NewsComponent/Tile";
-import { Link } from "@/navigation";
 
 export default async function Home({ params: { locale } }) {
   const data = await fetch("http://localhost:8000/post", {
@@ -14,7 +13,7 @@ export default async function Home({ params: { locale } }) {
     <main className="shadow-xl p-2 lg:w-full w-[90%] mx-auto">
       <div className="lg:grid grid-cols-4 gap-4 px-2 text-center mt-10 lg:mt-0  ">
         <div className="col-span-2 bg-slate-100">
-          <Slider />
+          <Slider locale={locale} />
         </div>
         <div className="flex flex-col justify-between gap-2 mt-10 lg:mt-0">
           {data
@@ -32,7 +31,7 @@ export default async function Home({ params: { locale } }) {
         </div>
 
         <div className="bg-slate-100 shadow-md my-10 lg:my-0">
-          <ChosenTile locale={locale} /> 
+          <ChosenTile locale={locale} />
         </div>
         {data.map((item) => (
           <div key={item.id} className=" bg-slate-100 shadow-md my-8 lg:my-0 ">

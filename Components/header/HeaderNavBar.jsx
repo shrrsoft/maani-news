@@ -87,7 +87,7 @@ const HeaderNavBar = ({ scroll, locale }) => {
           <select
             value={locale}
             onChange={handleChange}
-            className="bg-inherit text-center outline-none">
+            className="bg-inherit text-center outline-none ">
             <option value="en" className="bg-sky-950">
               English
             </option>
@@ -101,6 +101,7 @@ const HeaderNavBar = ({ scroll, locale }) => {
           <div>{new Date().toLocaleDateString(locale)}</div>
         </div>
       </div>
+      
     </div>
   );
 };

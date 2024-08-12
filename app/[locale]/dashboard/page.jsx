@@ -1,4 +1,4 @@
-import Header from "@/Components/header";
+import Header from "@/Components/header/Header";
 import Link from "next/link";
 import NewPost from "../../Components/Admin/NewPost";
 
