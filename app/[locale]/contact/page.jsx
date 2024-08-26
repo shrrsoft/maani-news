@@ -10,28 +10,28 @@ const page = ({ params: { locale } }) => {
         {locale === "fa" ? "تماس با ما" : " Contact us"}
       </h1>
       <div className="flex">
-        <MdFax className="text-2xl text-sky-900 ltr:mr-3" />
+        <MdFax className="text-2xl text-inherit ltr:mr-3" />
         <span className="mr-2">
           {locale === "fa" ? "فکس دبیرخانه : " : "Fax:"}
         </span>
         <span>021</span>
       </div>
       <div className="flex">
-        <FaPhoneAlt className="text-2xl text-sky-900 ltr:mr-3" />
+        <FaPhoneAlt className="text-2xl text-inherit ltr:mr-3" />
         <span className="mr-2">
           {locale === "fa" ? "روابط عمومی : " : "Public Relations:"}
         </span>
         <span>021</span>
       </div>
       <div className="flex">
-        <PiBuildingOfficeFill className="text-2xl text-sky-900 ltr:mr-3" />
+        <PiBuildingOfficeFill className="text-2xl text-inherit ltr:mr-3" />
         <span className="mr-2">
           {locale === "fa" ? "دفتر مرکزی" : "Central Office"} :
         </span>
         <span>021</span>
       </div>
       <div className="flex">
-        <MdAttachEmail className="text-2xl text-sky-900 ltr:mr-3" />
+        <MdAttachEmail className="text-2xl text-inherit ltr:mr-3" />
         <span className="mr-2">
           {locale === "fa" ? "ایمیل پشتیبانی" : "E-mail"} :
         </span>

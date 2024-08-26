@@ -5,6 +5,7 @@ import { GrLanguage } from "react-icons/gr";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
 import clsx from "clsx";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 
 const HeaderNavBar = ({ scroll, locale }) => {
   const t = useTranslations("Header");
@@ -28,7 +29,7 @@ const HeaderNavBar = ({ scroll, locale }) => {
         src="/logo_footer.png"
         alt=""
       />
-      <div className="flex mr-16 gap-4 p-1 items-center text-slate-300 hover:*:text-white">
+      <div className="flex mr-16 ltr:ml-16 gap-4 p-1 items-center text-slate-300 hover:*:text-white">
         <Link className="border-l pl-3" href="/">
           <AiFillHome />
         </Link>
@@ -95,13 +96,12 @@ const HeaderNavBar = ({ scroll, locale }) => {
               فارسی
             </option>
           </select>
-          <GrLanguage />
+          <ThemeSwitcher />
         </div>
         <div className="pl-3 flex gap-16 items-center">
           <div>{new Date().toLocaleDateString(locale)}</div>
         </div>
       </div>
-      
     </div>
   );
 };

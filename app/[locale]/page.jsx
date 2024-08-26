@@ -30,11 +30,13 @@ export default async function Home({ params: { locale } }) {
             .slice(0, 4)}
         </div>
 
-        <div className="bg-slate-100 shadow-md my-10 lg:my-0">
+        <div className=" my-10 lg:my-0 h-60">
           <ChosenTile locale={locale} />
         </div>
         {data.map((item) => (
-          <div key={item.id} className=" bg-slate-100 shadow-md my-8 lg:my-0 ">
+          <div
+            key={item.id}
+            className="shadow-lg shadow-slate-400 my-8 lg:my-0 ">
             <Tile
               id={item.id}
               imgURL={item.imgURL}

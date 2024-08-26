@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const SmallTile = ({ id, imgURL, title, titleEn, locale }) => {
   return (
-    <div className="bg-slate-100 shadow-md h-20 flex items-center justify-center">
+    <div className=" shadow-lg shadow-slate-400 h-20 flex items-center justify-center">
       <Link
         target="_blank"
         href={`/News/${id}`}
