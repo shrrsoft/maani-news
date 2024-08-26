@@ -1,6 +1,6 @@
 const page = ({ params: { locale } }) => {
   return (
-    <div className="w-[80%] mx-auto">
+    <div className="w-[80%] mx-auto mt-8">
       <h1 className="text-2xl font-bold mb-5 ">
         {locale === "fa" ? "خط مشی  " : "Policy"}
       </h1>

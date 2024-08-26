@@ -22,13 +22,6 @@ export default function RootLayout({ children, params: { locale } }) {
 
   return (
     <html lang={locale} dir={locale === "fa" ? "rtl" : "ltr"}>
-      <link
-        rel="icon"
-        href="/icon?<generated>"
-        type="image/<generated>"
-        sizes="<generated>"
-      />
-      ;
       <NextIntlClientProvider locale={locale} messages={messages}>
         <body className={`${inter.className} ${vazir.className} antialiased`}>
           <Header locale={locale} />

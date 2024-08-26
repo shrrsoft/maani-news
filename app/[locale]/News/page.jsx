@@ -7,7 +7,7 @@ const News = async ({ params: { locale } }) => {
   }).then((res) => res.json());
 
   return (
-    <div className="grid grid-cols-3 gap-2">
+    <div className="md:grid grid-cols-3 gap-2 md:w-full w-[90%] mx-auto">
       <div className="col-span-2">
         <h1 className="m-4 font-bold text-xl ">آخرین اخبار</h1>
         {data.map((item) => (
@@ -19,7 +19,7 @@ const News = async ({ params: { locale } }) => {
             <div className="w-20 h-10 relative rounded-sm overflow-hidden">
               <Image src={item.imgURL} alt={item.title} fill="true" />
             </div>
-            <label htmlFor="">
+            <label htmlFor="" className="basis-60 md:basis-full">
               {locale == "fa" ? item.title : item.titleEn}
             </label>
           </Link>
@@ -29,7 +29,7 @@ const News = async ({ params: { locale } }) => {
         <h2 className=" text-center font-bold text-md ">
           {locale == "fa" ? "آرشیو روزانه" : "Daily Archive"}
         </h2>
-        <div className="border shadow-md mb-5">
+        <div className="border shadow-md mb-5 p-1">
           <ul
             type="circle"
             className="list-disc rtl:pr-5 rtl:text-right ltr:text-left ltr:px-5 font-bold  text-sm py-4 flex flex-col gap-3 ">
@@ -44,10 +44,10 @@ const News = async ({ params: { locale } }) => {
               .slice(0, 8)}
           </ul>
         </div>
-        <h2 className=" text-center font-bold text-md ">
+        <h2 className=" text-center font-bold text-md">
           {locale == "fa" ? "آرشیو هفتگی" : "Weekly Archive"}
         </h2>
-        <div className="border shadow-md mb-5">
+        <div className="border shadow-md mb-5 p-1">
           <ul
             type="circle"
             className="list-disc rtl:pr-5 rtl:text-right ltr:text-left ltr:px-5 font-bold  text-sm py-4 flex flex-col gap-3 ">
@@ -65,7 +65,7 @@ const News = async ({ params: { locale } }) => {
         <h2 className=" text-center font-bold text-md ">
           {locale == "fa" ? "آرشیو ماهانه" : "Monthly Archive"}
         </h2>
-        <div className="border shadow-md mb-5">
+        <div className="border shadow-md mb-5 p-1">
           <ul
             type="circle"
             className="list-disc rtl:pr-5 rtl:text-right ltr:text-left ltr:px-5 font-bold  text-sm py-4 flex flex-col gap-3 ">
