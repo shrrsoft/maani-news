@@ -19,5 +19,13 @@
     },
     "body": {
         "CollectedNews": "CollectedNews"
+    },
+    "comment": {
+        "NewComment": "New Comment",
+        "Username": "Username:",
+        "E-mail": "E-mail",
+        "YourComment": "Your Comment:",
+        "Submit": "Submit",
+        "Comments": "Comments"
     }
 }

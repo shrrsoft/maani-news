@@ -5,7 +5,7 @@ const ChosenTile = async ({ locale }) => {
     cache: "force-cache",
   }).then((res) => res.json());
   return (
-    <div className=" px-2 py-4 shadow-lg shadow-slate-400 h-[26rem]">
+    <div className=" px-2 py-4 min-h-[26rem] shadow-lg shadow-slate-400 ">
       <h3 className="font-bold text-lg mb-3">
         {locale == "fa" ? "اخبار برگزیده" : "Collected News"}
       </h3>

@@ -7,6 +7,7 @@ import { GrLanguage } from "react-icons/gr";
 import { useTranslations } from "next-intl";
 import { AiFillHome } from "react-icons/ai";
 import { useRouter, usePathname } from "@/navigation";
+import { ThemeSwitcher } from "../ThemeSwitcher";
 import clsx from "clsx";
 
 import { useState } from "react";
@@ -117,7 +118,7 @@ const MobileMenu = ({ locale }) => {
                     فارسی
                   </option>
                 </select>
-                <GrLanguage className="text-xl" />
+                <ThemeSwitcher />
               </div>
               <div>
                 {isOpen ? (

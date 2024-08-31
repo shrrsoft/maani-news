@@ -4,6 +4,10 @@ import Slider from "@/Components/NewsComponent/Slider";
 import SmallTile from "@/Components/NewsComponent/SmallTile";
 import Tile from "@/Components/NewsComponent/Tile";
 
+export function generateStaticParams() {
+  return [{ locale: "fa" }];
+}
+
 export default async function Home({ params: { locale } }) {
   const data = await fetch("http://localhost:8000/post", {
     cache: "force-cache",

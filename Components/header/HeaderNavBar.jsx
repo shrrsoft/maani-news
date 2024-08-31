@@ -1,7 +1,6 @@
 import { Link } from "@/navigation";
 import { AiFillHome } from "react-icons/ai";
 import HeaderSearchBox from "./HeaderSearchBox";
-import { GrLanguage } from "react-icons/gr";
 import { useTranslations } from "next-intl";
 import { useRouter, usePathname } from "@/navigation";
 import clsx from "clsx";

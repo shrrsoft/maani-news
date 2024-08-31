@@ -19,5 +19,13 @@
     },
     "body": {
         "CollectedNews": "اخبار برگزیده"
+    },
+    "comment": {
+        "NewComment": "دیدگاه جدید",
+        "Username": "نام کاربری:",
+        "E-mail": "پست الکترونیک:",
+        "YourComment": "دیدگاه شما:",
+        "Submit": "ثبت دیدگاه",
+        "Comments": "دیدگاه ها"
     }
 }
