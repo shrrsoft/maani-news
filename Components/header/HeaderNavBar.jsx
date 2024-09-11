@@ -22,10 +22,10 @@ const HeaderNavBar = ({ scroll, locale }) => {
           : ""
       } `}>
       <img
-        className={`w-auto h-10 invert rounded-md p-1 ${
+        className={`w-auto h-10 rounded-md p-1 ${
           scroll ? "fixed" : "hidden"
         }`}
-        src="/logo_footer.png"
+        src="/logo.png"
         alt=""
       />
       <div className="flex mr-16 ltr:ml-16 gap-4 p-1 items-center text-slate-300 hover:*:text-white">

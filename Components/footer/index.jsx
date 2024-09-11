@@ -103,8 +103,8 @@ const Footer = () => {
           <span className="text-sm text-center w-40">{t("Designer")}</span>
           <span className="text-sm text-center">{t("CoppyWrite")}</span>
           <img
-            className="invert rounded-md p-1  w-40 lg:mt-0"
-            src="/logo_footer.png"
+            className=" rounded-md p-1  w-40 lg:mt-0"
+            src="/logo.png"
             alt="footer logo"
           />
         </div>
