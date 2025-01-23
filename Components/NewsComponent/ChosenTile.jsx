@@ -1,9 +1,7 @@
+import { post } from "@/data/db";
 import Link from "next/link";
 
 const ChosenTile = async ({ locale }) => {
-  const data = await fetch("http://localhost:8000/post", {
-    cache: "force-cache",
-  }).then((res) => res.json());
   return (
     <div className=" px-2 py-4 min-h-[26rem] shadow-lg shadow-slate-400 ">
       <h3 className="font-bold text-lg mb-3">
@@ -12,7 +10,7 @@ const ChosenTile = async ({ locale }) => {
       <ul
         type="circle"
         className="list-disc rtl:pr-5 font-bold rtl:text-right ltr:text-left ltr:pl-5 text-sm py- flex flex-col gap-3 ">
-        {data
+        {post
           .map((item) => (
             <li key={item.id}>
               <Link target="_blank" href={`/News/${item.id}`}>

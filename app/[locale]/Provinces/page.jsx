@@ -1,16 +1,13 @@
 import ChosenTile from "@/Components/NewsComponent/ChosenTile";
+import { post } from "@/data/db";
 import Image from "next/image";
 import Link from "next/link";
 
 const Provinces = async ({ params: { locale } }) => {
-  const data = await fetch("http://localhost:8000/post").then((res) =>
-    res.json()
-  );
-
   return (
     <>
       <div className=" md:grid grid-cols-3 gap-4 md:w-full w-[90%] mx-auto ">
-        {data.map((item) => (
+        {post.map((item) => (
           <Link key={item.id} href={`/News/${item.id}`} className="col-span-2">
             <div
               key={item.id}

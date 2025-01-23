@@ -1,10 +1,7 @@
+import { post } from "@/data/db";
 import Image from "next/image";
 
 const PageNews = async ({ params, params: { locale } }) => {
-  const post = await fetch(`http://localhost:8000/post/${params.id}`, {
-    cache: "no-store",
-  }).then((res) => res.json());
-
   return (
     <div className="flex justify-center w-full">
       <div className="flex flex-col items-center gap-10 w-[90%]">

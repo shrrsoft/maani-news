@@ -2,6 +2,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdFax } from "react-icons/md";
 import { PiBuildingOfficeFill } from "react-icons/pi";
 import { MdAttachEmail } from "react-icons/md";
+import Link from "next/link";
 
 const page = ({ params: { locale } }) => {
   return (
@@ -14,28 +15,30 @@ const page = ({ params: { locale } }) => {
         <span className="mr-2">
           {locale === "fa" ? "فکس دبیرخانه : " : "Fax:"}
         </span>
-        <span>021</span>
+        <Link href="tell:+9821">021</Link>
       </div>
       <div className="flex">
         <FaPhoneAlt className="text-2xl text-inherit ltr:mr-3" />
         <span className="mr-2">
           {locale === "fa" ? "روابط عمومی : " : "Public Relations:"}
         </span>
-        <span>021</span>
+        <Link href="tell:+9821">021</Link>
       </div>
       <div className="flex">
         <PiBuildingOfficeFill className="text-2xl text-inherit ltr:mr-3" />
         <span className="mr-2">
           {locale === "fa" ? "دفتر مرکزی" : "Central Office"} :
         </span>
-        <span>021</span>
+        <Link href="tell:+9821">021</Link>
       </div>
       <div className="flex">
         <MdAttachEmail className="text-2xl text-inherit ltr:mr-3" />
         <span className="mr-2">
           {locale === "fa" ? "ایمیل پشتیبانی" : "E-mail"} :
         </span>
-        <span>support@IranianAgency.info</span>
+        <Link href="mailto:shrrsoft@yahoo.com">
+          support@MaaninewsAgency.info
+        </Link>
       </div>
     </div>
   );

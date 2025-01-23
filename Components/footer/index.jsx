@@ -5,7 +5,7 @@ const Footer = () => {
   const t = useTranslations("Footer");
 
   return (
-    <div className=" text-white pt-20 font-[Vazirmatn] ">
+    <div className=" text-white pt-20 font-[Vazirmatn] max-w-[100rem] mx-auto ">
       <div className="bg-slate-700 md:px-32 py-3 h-14">
         <div className=" flex items-center">
           <div className="flex md:items-end gap-2 p-1 text-sm ">

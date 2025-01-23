@@ -1,16 +1,13 @@
+import { post } from "@/data/db";
 import Image from "next/image";
 import Link from "next/link";
 
 const News = async ({ params: { locale } }) => {
-  const data = await fetch("http://localhost:8000/post", {
-    cache: "force-cache",
-  }).then((res) => res.json());
-
   return (
     <div className="md:grid grid-cols-3 gap-2 md:w-full w-[90%] mx-auto">
       <div className="col-span-2">
         <h1 className="m-4 font-bold text-xl ">آخرین اخبار</h1>
-        {data.map((item) => (
+        {post.map((item) => (
           <Link
             key={item.id}
             target="_blank"
@@ -33,7 +30,7 @@ const News = async ({ params: { locale } }) => {
           <ul
             type="circle"
             className="list-disc rtl:pr-5 rtl:text-right ltr:text-left ltr:px-5 font-bold  text-sm py-4 flex flex-col gap-3 ">
-            {data
+            {post
               .map((item) => (
                 <li key={item.id}>
                   <Link href={`/News/${item.id}`}>
@@ -51,7 +48,7 @@ const News = async ({ params: { locale } }) => {
           <ul
             type="circle"
             className="list-disc rtl:pr-5 rtl:text-right ltr:text-left ltr:px-5 font-bold  text-sm py-4 flex flex-col gap-3 ">
-            {data
+            {post
               .map((item) => (
                 <li key={item.id}>
                   <Link href={`/News/${item.id}`}>
@@ -69,7 +66,7 @@ const News = async ({ params: { locale } }) => {
           <ul
             type="circle"
             className="list-disc rtl:pr-5 rtl:text-right ltr:text-left ltr:px-5 font-bold  text-sm py-4 flex flex-col gap-3 ">
-            {data
+            {post
               .map((item) => (
                 <li key={item.id}>
                   <Link href={`/News/${item.id}`}>

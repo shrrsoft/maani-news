@@ -92,7 +92,7 @@ const MobileMenu = ({ locale }) => {
         <h1 className="font-[vazirmatn] mb-2 border-sky-800 text-3xl font-bold text-sky-800 pr-3 text-center">
           {locale === "fa" ? "خبرگزاری ایرانی" : "Iranian Agency"}
         </h1>
-        <img src="/logo_footer.png" alt="" className="h-auto w-44" />
+        <img src="/logo.png" alt="" className="h-auto w-44" />
       </div>
       <div className="flex items-center pt-2 pb-1 justify-center px-8">
         <HeaderSearchBox />
