@@ -36,7 +36,7 @@ const Header = ({ locale }) => {
           </div>
         </div>
       </div>
-      <MobileMenu />
+      <MobileMenu locale={locale} />
     </>
   );
 };

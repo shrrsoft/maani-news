@@ -5,9 +5,9 @@ export const routing = defineRouting({
   // A list of all locales that are supported
     locales: ['en', 'fa'],
     localeDetection: false,
+    defaultLocale: 'fa',
+    // localePrefix: "as-needed",
 
-  // Used when no locale matches
-    defaultLocale: 'fa'
 
 });
  

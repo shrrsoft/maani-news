@@ -11,14 +11,14 @@ const News = async ({ params: { locale } }) => {
           <Link
             key={item.id}
             target="_blank"
-            href={`/News/${item.id}`}
+            href={`/${[locale]}/news/${item.id}`}
             className="flex justify-start items-center gap-4 border-b border-t m-2">
             <div className="w-20 h-10 relative rounded-sm overflow-hidden">
               <Image src={item.imgURL} alt={item.title} fill="true" />
             </div>
-            <label htmlFor="" className="basis-60 md:basis-full">
+            <p htmlFor="" className="basis-60 md:basis-full line-clamp-1">
               {locale == "fa" ? item.title : item.titleEn}
-            </label>
+            </p>
           </Link>
         ))}
       </div>
@@ -33,7 +33,7 @@ const News = async ({ params: { locale } }) => {
             {post
               .map((item) => (
                 <li key={item.id}>
-                  <Link href={`/News/${item.id}`}>
+                  <Link href={`/${[locale]}/news/${item.id}`}>
                     {locale == "fa" ? item.title : item.titleEn}
                   </Link>
                 </li>
@@ -51,7 +51,7 @@ const News = async ({ params: { locale } }) => {
             {post
               .map((item) => (
                 <li key={item.id}>
-                  <Link href={`/News/${item.id}`}>
+                  <Link href={`/${[locale]}/news/${item.id}`}>
                     {locale == "fa" ? item.title : item.titleEn}
                   </Link>
                 </li>
@@ -69,7 +69,7 @@ const News = async ({ params: { locale } }) => {
             {post
               .map((item) => (
                 <li key={item.id}>
-                  <Link href={`/News/${item.id}`}>
+                  <Link href={`/${[locale]}/news/${item.id}`}>
                     {locale == "fa" ? item.title : item.titleEn}
                   </Link>
                 </li>

@@ -81,7 +81,7 @@ const HeaderNavBar = ({ scroll, locale }) => {
           {t("Provinces")}
         </Link>
       </div>
-      {scroll ? <HeaderSearchBox t={t} /> : <></>}
+      {scroll && <HeaderSearchBox t={t} />}
       <div className="flex gap-10">
         <div className="flex items-center gap-2">
           <select

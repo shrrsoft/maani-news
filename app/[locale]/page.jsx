@@ -19,34 +19,19 @@ export default async function Home({ params: { locale } }) {
         <div className="flex flex-col justify-between gap-2 mt-10 lg:mt-0">
           {post
             .map((item) => (
-              <SmallTile
-                key={item.id}
-                id={item.id}
-                imgURL={item.imgURL}
-                title={item.title}
-                titleEn={item.titleEn}
-                locale={locale}
-              />
+              <SmallTile key={item.id} item={item} locale={locale} />
             ))
             .slice(0, 4)}
         </div>
 
-        <div className=" my-10 lg:my-0 h-60">
+        <div className=" my-10 lg:my-0">
           <ChosenTile locale={locale} />
         </div>
         {post.map((item) => (
           <div
             key={item.id}
             className="shadow-lg shadow-slate-400 my-8 lg:my-0 ">
-            <Tile
-              id={item.id}
-              imgURL={item.imgURL}
-              title={item.title}
-              titleEn={item.titleEn}
-              abst={item.abst}
-              abst_en={item.abst_en}
-              locale={locale}
-            />
+            <Tile item={item} locale={locale} />
           </div>
         ))}
       </div>

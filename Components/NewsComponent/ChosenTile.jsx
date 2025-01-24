@@ -13,7 +13,7 @@ const ChosenTile = async ({ locale }) => {
         {post
           .map((item) => (
             <li key={item.id}>
-              <Link target="_blank" href={`/News/${item.id}`}>
+              <Link target="_blank" href={`/${[locale]}/news/${item.id}`}>
                 {locale == "fa" ? item.title : item.titleEn}
               </Link>
             </li>
