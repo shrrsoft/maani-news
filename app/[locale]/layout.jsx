@@ -3,9 +3,10 @@ import "./globals.css";
 import Header from "@/Components/header/Header";
 import Footer from "@/Components/footer";
 import { notFound } from "next/navigation";
-import { NextIntlClientProvider, useMessages } from "next-intl";
-import { locales } from "@/navigation";
+import { NextIntlClientProvider } from "next-intl";
 import { ThemeProvider } from "@/Components/theme-provider";
+import { getMessages } from "next-intl/server";
+import { routing } from "@/i18n/routing";
 
 const inter = Inter({ subsets: ["latin"] });
 const vazir = Vazirmatn({ subsets: ["latin"] });
@@ -15,11 +16,11 @@ export const metadata = {
   description: "Persian News Agency",
 };
 
-export default function RootLayout({ children, params: { locale } }) {
-  if (!locales.includes(locale)) {
+export default async function RootLayout({ children, params: { locale } }) {
+  if (!routing.locales.includes(locale)) {
     notFound();
   }
-  const messages = useMessages();
+  const messages = await getMessages();
 
   return (
     <html
