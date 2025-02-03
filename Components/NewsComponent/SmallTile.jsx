@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 const SmallTile = ({ item, locale }) => {
@@ -6,7 +6,7 @@ const SmallTile = ({ item, locale }) => {
     <div className=" md:shadow-lg border md:border-none p-2 shadow-slate-400 h-20 flex items-center justify-center">
       <Link
         target="_blank"
-        href={`/${[locale]}/news/${item.id}`}
+        href={`/news/${item.id}`}
         className="flex items-center justify-start gap-4">
         <div className="w-24 h-16 overflow-hidden relative">
           <Image

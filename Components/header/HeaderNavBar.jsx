@@ -1,8 +1,8 @@
-import { Link } from "@/navigation";
+import { Link } from "@/i18n/routing";
 import { AiFillHome } from "react-icons/ai";
 import HeaderSearchBox from "./HeaderSearchBox";
 import { useTranslations } from "next-intl";
-import { useRouter, usePathname } from "@/navigation";
+import { useRouter, usePathname } from "@/i18n/routing";
 import clsx from "clsx";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 

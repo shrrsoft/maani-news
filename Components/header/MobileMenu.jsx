@@ -1,11 +1,11 @@
 "use client";
 
-import { Link } from "@/navigation";
+import { Link } from "@/i18n/routing";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeLine } from "react-icons/ri";
 import { useTranslations } from "next-intl";
 import { AiFillHome } from "react-icons/ai";
-import { useRouter, usePathname } from "@/navigation";
+import { useRouter, usePathname } from "@/i18n/routing";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import clsx from "clsx";
 
