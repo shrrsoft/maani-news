@@ -38,53 +38,53 @@ const MobileMenu = ({ locale }) => {
           <Link
             className={clsx("text-center text-lg py-3", {
               "bg-white/30 text-white rounded-full w-72":
-                pathname === "/Politics",
+                pathname === "/politics",
             })}
-            href="/Politics">
+            href="/politics">
             {t("Politics")}
           </Link>
           <div className="w-60 h-0.5 bg-gradient-to-r from-white/10 via-white to-white/20"></div>
           <Link
             className={clsx("text-center text-lg py-3", {
               "bg-white/30 text-white rounded-full w-72":
-                pathname === "/Economy",
+                pathname === "/economy",
             })}
-            href="/Economy">
+            href="/economy">
             {t("Economy")}
           </Link>
           <div className="w-60 h-0.5 bg-gradient-to-r from-white/10 via-white to-white/20"></div>
           <Link
             className={clsx("text-center text-lg py-3", {
               "bg-white/30 text-white rounded-full w-72":
-                pathname === "/Culture",
+                pathname === "/culture",
             })}
-            href="/Culture">
+            href="/culture">
             {t("Culture")}
           </Link>
           <div className="w-60 h-0.5 bg-gradient-to-r from-white/10 via-white to-white/20"></div>
           <Link
             className={clsx("text-center text-lg py-3", {
               "bg-white/30 text-white rounded-full w-72":
-                pathname === "/Social",
+                pathname === "/social",
             })}
-            href="/Social">
+            href="/social">
             {t("Social")}
           </Link>
           <div className="w-60 h-0.5 bg-gradient-to-r from-white/10 via-white to-white/20"></div>
           <Link
             className={clsx("text-center text-lg py-3", {
-              "bg-white/30 text-white rounded-full w-72": pathname === "/Sport",
+              "bg-white/30 text-white rounded-full w-72": pathname === "/sport",
             })}
-            href="/Sport">
+            href="/sport">
             {t("Sport")}
           </Link>
           <div className="w-60 h-0.5 bg-gradient-to-r from-white/10 via-white to-white/20"></div>
           <Link
             className={clsx("text-center text-lg py-3", {
-              "bg-white/30 text-white rounded-sm w-72":
-                pathname === "/Provinces",
+              "bg-white/30 text-white rounded-full w-72":
+                pathname === "/provinces",
             })}
-            href="/Provinces">
+            href="/provinces">
             {t("Provinces")}
           </Link>
         </div>

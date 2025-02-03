@@ -22,9 +22,7 @@ const HeaderNavBar = ({ scroll, locale }) => {
           : ""
       } `}>
       <img
-        className={`w-auto h-10 rounded-md p-1 ${
-          scroll ? "fixed" : "hidden"
-        }`}
+        className={`w-auto h-10 rounded-md p-1 ${scroll ? "fixed" : "hidden"}`}
         src="/logo.png"
         alt=""
       />
@@ -35,49 +33,49 @@ const HeaderNavBar = ({ scroll, locale }) => {
         <Link
           className={clsx("", {
             "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
-              pathname === "/Politics",
+              pathname === "/politics",
           })}
-          href="/Politics">
+          href="/politics">
           {t("Politics")}
         </Link>
         <Link
           className={clsx("", {
             "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
-              pathname === "/Economy",
+              pathname === "/economy",
           })}
-          href="/Economy">
+          href="/economy">
           {t("Economy")}
         </Link>
         <Link
           className={clsx("", {
             "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
-              pathname === "/Culture",
+              pathname === "/culture",
           })}
-          href="/Culture">
+          href="/culture">
           {t("Culture")}
         </Link>
         <Link
           className={clsx("", {
             "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
-              pathname === "/Social",
+              pathname === "/social",
           })}
-          href="/Social">
+          href="/social">
           {t("Social")}
         </Link>
         <Link
           className={clsx("", {
             "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
-              pathname === "/Sport",
+              pathname === "/sport",
           })}
-          href="/Sport">
+          href="/sport">
           {t("Sport")}
         </Link>
         <Link
           className={clsx("", {
             "w-16 ltr:w-20 text-center bg-white/30 py-1.5 text-white rounded-sm":
-              pathname === "/Provinces",
+              pathname === "/provinces",
           })}
-          href="/Provinces">
+          href="/provinces">
           {t("Provinces")}
         </Link>
       </div>
