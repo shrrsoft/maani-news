@@ -11,7 +11,7 @@ const News = async ({ params: { locale } }) => {
           <Link
             key={item.id}
             target="_blank"
-            href={`/${[locale]}/news/${item.id}`}
+            href={`/${[locale]}/news-page/${item.id}`}
             className="flex justify-start items-center gap-4 border-b border-t m-2">
             <div className="w-20 h-10 relative rounded-sm overflow-hidden">
               <Image src={item.imgURL} alt={item.title} fill="true" />

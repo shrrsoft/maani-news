@@ -6,7 +6,7 @@ const Tile = ({ item, locale }) => {
     <div className="flex flex-col gap-2 items-center justify-center p-2 pb-8">
       <Link
         target="_blank"
-        href={`/${[locale]}/news/${item.id}`}
+        href={`/${[locale]}/news-page/${item.id}`}
         className="font-bold">
         <div className="h-40 mx-auto relative rounded-sm overflow-hidden mb-2">
           <Image src={item.imgURL} alt={item.title} width={300} height={100} />

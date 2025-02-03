@@ -6,7 +6,7 @@ const SmallTile = ({ item, locale }) => {
     <div className=" md:shadow-lg border md:border-none p-2 shadow-slate-400 h-20 flex items-center justify-center">
       <Link
         target="_blank"
-        href={`/news/${item.id}`}
+        href={`/news-page/${item.id}`}
         className="flex items-center justify-start gap-4">
         <div className="w-24 h-16 overflow-hidden relative">
           <Image

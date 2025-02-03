@@ -12,7 +12,7 @@ const Footer = () => {
             <Link className="rtl:border-l px-2" href="/policy">
               {t("Policy")}
             </Link>
-            <Link className="border-l pl-2" href="/news">
+            <Link className="border-l pl-2" href="/news-page">
               {t("Archive")}
             </Link>
             <Link className="border-l pl-2" href="/about">

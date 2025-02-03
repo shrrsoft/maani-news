@@ -10,7 +10,7 @@ const NewsCategoryPage = ({ locale }) => {
         {post.map((item) => (
           <Link
             key={item.id}
-            href={`/${[locale]}/news/${item.id}`}
+            href={`/${[locale]}/news-page/${item.id}`}
             className="col-span-2">
             <div
               key={item.id}
@@ -22,7 +22,9 @@ const NewsCategoryPage = ({ locale }) => {
                 <h3 className="font-bold mb-3 text-center">
                   {locale == "fa" ? item.title : item.titleEn}
                 </h3>
-                <p className="text-justify line-clamp-4">{locale == "fa" ? item.body : item.body_en}</p>
+                <p className="text-justify line-clamp-4">
+                  {locale == "fa" ? item.body : item.body_en}
+                </p>
               </div>
             </div>
           </Link>
